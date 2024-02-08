@@ -43,5 +43,13 @@ while running:
                 playerX_change = 0
 
     playerX += playerX_change
+
+    # Border left/right
+    if playerX <= 0:
+        playerX = 0
+    # 800px-64px=736
+    elif playerX >= 736:
+        playerX = 736
+
     player(playerX, playerY)
     pygame.display.update()
